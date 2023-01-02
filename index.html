@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="js/app.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+        integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>QR Code Generator</title>
+</head>
+
+<body>
+    <header>
+        <div class="appBar">
+            <h1>QR Code Generator</h1>
+        </div>
+    </header>
+
+    <div class="item1">
+        <h1>QR Code Generator</h1>
+        <p>QR Codes allow smartphone users to access your website simply and quickly</p>
+        <p>Enter you URL below to generate a QR Code and Download the image.</p>
+        <form action="" id="generate-form">
+            <input type="url" name="" id="url" placeholder="Enter a URL">
+            <select name="" id="size">
+                <option value="100">100x100</option>
+                <option value="200">200x200</option>
+                <option value="300" selected>300x300</option>
+                <option value="400">400x400</option>
+                <option value="500">500x500</option>
+                <option value="600">600x600</option>
+                <option value="700">700x700</option>
+            </select>
+            <button type="submit">
+                Generate QR Code
+            </button>
+        </form>
+    </div>
+    <div class="item2">
+        <img src="img/qr-code.svg" alt="">
+    </div>
+
+</body>
+
+</html>
