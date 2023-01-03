@@ -30,10 +30,15 @@ h1{
     padding: 10px;
 }
 
+.item1 h1{
+    text-align: left;
+}
+
 .item1 p{
     font-size: 15px;
     margin-bottom: 2%;
     padding: 10px;
+    text-align: left;
 }
 
 form{
@@ -85,5 +90,10 @@ button:hover{
 }
 
 img{
+    width: 150px;
+}
+
+svg{
+    margin-top: -10%;
     width: 150px;
 }
