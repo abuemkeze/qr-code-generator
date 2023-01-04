@@ -14,9 +14,9 @@ const onGenerateSubmit = (e) => {
 
 }
 
-const generateQRcode = (url, size) => {
-
-    const qrcode = new QRCode('qrcode',{
+const generateQRcode = (url, size) => {  
+  
+    const qrcode = new QRCode(document.getElementById("qrcode"),{
         text: url,
         width: size,
         height: size
