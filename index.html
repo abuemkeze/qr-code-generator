@@ -12,42 +12,22 @@
 </head>
 
 <body>
-    <header>
-        <div class="appBar">
-            <h1>QR Code Generator</h1>
-        </div>
-    </header>
-    <main>
-        <div>
-            <div class="item1">
-                <h1>QR Code Generator</h1>
-                <p>QR Codes allow smartphone users to access your website simply and quickly</p>
-                <p>Enter you URL below to generate a QR Code and Download the image.</p>
-                <form action="" id="generate-form">
-                    <input type="url" name="" id="url" placeholder="Enter a URL">
-                    <select name="" id="size">
-                        <option value="100">100x100</option>
-                        <option value="200">200x200</option>
-                        <option value="300" selected>300x300</option>
-                        <option value="400">400x400</option>
-                        <option value="500">500x500</option>
-                        <option value="600">600x600</option>
-                        <option value="700">700x700</option>
-                    </select>
-                    <button type="submit">
-                        Generate QR Code
-                    </button>
-                </form>
-            </div>
-            <div class="item2">
-                <img src="img/qr-code.svg" alt="">
-            </div>
-        </div>
-        <!-- QR Code Output -->
-        <div id="qrcode"></div>
-    </main>
-    <script src="js/qrcode.js"></script>
-    <script src="js/qrcode.min.js"></script>
+    <div class="input-section">
+        <section class="title-section">
+            <div class="title">QR Code Generator</div>
+            <div class="text">QR Codes allow smartphone users to access your website simply and quickly<br>Enter your
+                URL below to generate a QR Code and Download the image.</div>
+        </section>
+        <section class="input">
+            <form action="" id="generate-form">
+                <input type="url" name="url" id="url" placeholder="Enter URL">
+                <button class="button" type="submit">Generate QR Code <i class="fa-solid fa-rotate"></i></button>
+            </form>
+        </section>
+    </div>
+    <div class="qrcode-container">
+        <div class="qrcode">QRCODE</div>
+    </div>
 </body>
 
 </html>
