@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="styles/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="js/app.js" defer></script>
+    <style>
+        #spinner{
+            display: none;
+        }
+    </style>
     <title>QR Code Generator</title>
 </head>
 
@@ -25,8 +30,52 @@
             </form>
         </section>
     </div>
-    <div class="qrcode-container">
-        <div class="qrcode">QRCODE</div>
+
+    <!-- Generated QR Code -->
+    <div class="qrcode-container" id="generated">
+
+        <!-- Spinner -->
+        <div id="spinner" role="status">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    .spinner_qM83 {
+                        animation: spinner_8HQG 1.05s infinite
+                    }
+    
+                    .spinner_oXPr {
+                        animation-delay: .1s
+                    }
+    
+                    .spinner_ZTLf {
+                        animation-delay: .2s
+                    }
+    
+                    @keyframes spinner_8HQG {
+    
+                        0%,
+                        57.14% {
+                            animation-timing-function: cubic-bezier(0.33, .66, .66, 1);
+                            transform: translate(0)
+                        }
+    
+                        28.57% {
+                            animation-timing-function: cubic-bezier(0.33, 0, .66, .33);
+                            transform: translateY(-6px)
+                        }
+    
+                        100% {
+                            transform: translate(0)
+                        }
+                    }
+                </style>
+                <circle class="spinner_qM83" cx="4" cy="12" r="3" />
+                <circle class="spinner_qM83 spinner_oXPr" cx="12" cy="12" r="3" />
+                <circle class="spinner_qM83 spinner_ZTLf" cx="20" cy="12" r="3" />
+            </svg>
+            <span class="sr-only" style="margin:2%;">Loading...</span>
+        </div>
+        <!-- QR Code Output -->
+        <div id="qrcode"></div>
     </div>
 </body>
 
