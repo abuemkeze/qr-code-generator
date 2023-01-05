@@ -1,26 +1,43 @@
-const form = document.getElementById('generate-form');
-const qr = document.getElementById('qr-code');
+const form = document.getElementById('generate-form')
+const qr = document.getElementById('qrcode')
 
 const onGenerateSubmit = (e) => {
     e.preventDefault();
-    const url = document.getElementById('url').value;
-    const size = document.getElementById('size').value;
+
+    clearUI();
+
+    const url = document.getElementById('url').value
 
     if (url === '') {
-        alert("Please Enter a URL")
+        alert('Please Enter a URL')
     } else {
-        generateQRcode(url,size);
+        showSpinner();
+        setTimeout(() => {
+            hideSpinner();
+            generateQRCode(url);
+        }, 2000)
     }
-
 }
 
-const generateQRcode = (url, size) => {  
-  
-    const qrcode = new QRCode(document.getElementById("qrcode"),{
+const generateQRCode = (url) => {
+    const qrcode = new QRCode('qrcode', {
         text: url,
-        width: size,
-        height: size
+        width: 200,
+        height: 200,
     });
 }
 
+const showSpinner = () => {
+    document.getElementById('spinner').style.display = 'block';
+}
+
+const hideSpinner = () => {
+    document.getElementById('spinner').style.display = 'none';
+}
+
+const clearUI = () => {
+    qr.innerHTML = '';
+}
+
+hideSpinner();
 form.addEventListener('submit', onGenerateSubmit);

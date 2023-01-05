@@ -121,7 +121,7 @@ button:hover{
     }
 }
 
-.qrcode{
+#qrcode{
     display: flex;
     width: fit-content;
     flex-direction: column;
